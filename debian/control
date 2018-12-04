@@ -2,8 +2,22 @@ Source: python-jenkinsapi
 Section: python
 Priority: optional
 Maintainer: Al Stone <ahs3@debian.org>
-Build-Depends: debhelper (>= 11.0.0), python-all-dev, python-lxml, python-setuptools,
- python3-all-dev, python3-lxml, python3-setuptools 
+Build-Depends: debhelper (>= 11.0.0),
+ curl,
+ python-all-dev,
+ python-lxml,
+ python-mock,
+ python-pytest,
+ python-requests,
+ python-setuptools,
+ python-tz,
+ python3-all-dev,
+ python3-lxml,
+ python3-mock,
+ python3-pytest,
+ python3-requests,
+ python3-setuptools,
+ python3-tz
 Standards-Version: 3.9.8
 Homepage: http://pypi.python.org/pypi/jenkinsapi
 Vcs-Git: https://github.com/ahs3/python-jenkinsapi
