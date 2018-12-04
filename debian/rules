@@ -9,8 +9,10 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+export PYBUILD_NAME=jenkinsapi
+
 %:
-	dh $@ --with python2,python3
+	dh $@ --buildsystem=pybuild --with python2,python3
 
 # too many tests try to get content from jenkins.org
 override_dh_auto_test:
