@@ -10,9 +10,11 @@
 #export DH_VERBOSE=1
 
 export PYBUILD_NAME=jenkinsapi
+export PYBUILD_AFTER_INSTALL_python2 = rm -rv {destdir}/usr/bin
+#d = $(CURDIR)/debian/jenkinsapi/usr/bin
+#export PYBUILD_AFTER_INSTALL_python3 = mkdir -pv $d && mv -v {destdir}/usr/bin/js-beautify $d
+# too many tests try to get content from jenkins.org
+export PYBUILD_DISABLE=test
 
 %:
 	dh $@ --buildsystem=pybuild --with python2,python3
-
-# too many tests try to get content from jenkins.org
-override_dh_auto_test:
