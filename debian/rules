@@ -11,3 +11,6 @@
 
 %:
 	dh $@ --with python2,python3
+
+# too many tests try to get content from jenkins.org
+override_dh_auto_test:
